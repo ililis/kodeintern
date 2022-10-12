@@ -1,0 +1,14 @@
+.tab_selector {
+  height: 36px;
+  padding: 8px 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #97979B;
+}
+.tab_selector:hover {
+  color: #050510;
+  cursor: pointer;
+}
