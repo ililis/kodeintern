@@ -1,7 +1,4 @@
 import './Navbar.css';
-// import React, {useState} from 'react';
-import { useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom"
 import styled from "styled-components"
 import TabSelector from './TabSelector';
 
@@ -10,13 +7,9 @@ const TopDivider = styled.div`
     width: 100%;
 `;
 
-
-const Navbar = () => {
-  const navigate = useNavigate();
-  const deps = ["Все", "Designers", "Analysts", "Managers", "iOS", "Android"];
+const Navbar = (props) => {
   return (
     <div>
-      
       <div className="navbar">
       <TopDivider/>
           <div className="header_container">
@@ -26,13 +19,13 @@ const Navbar = () => {
           <input type="text" className="search" placeholder="Введи имя, тег, почту..."></input>
         </div>
         <div className='scrollbar_container'>
-          {deps.map(dep => (
-            <TabSelector key={dep} name={dep}/>
+          {props.deps.map(dep => (
+              <TabSelector key={dep.dir} name={dep.name} dir={dep.dir}/>   
           ))}
         </div>
         
       </div>
-      <hr/>
+      <hr className='navbar_divider'/>
     </div>
   );
 };

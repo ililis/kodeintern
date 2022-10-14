@@ -83,11 +83,13 @@ input::placeholder{
 .scrollbar_container {
     display: flex;
     margin: 8px 0px 0px 16px;
-    height: 44px;
+    height: Hug(36px);
 }
-hr {
+.navbar_divider {
     margin: 0;
     padding: 0;
-    height: 0.33px;
+    border: none;
+    height: 0.03em;
     background: #C3C3C6;
+    /* overflow: visible; */
 }

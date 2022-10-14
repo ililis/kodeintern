@@ -1,6 +1,5 @@
 .tab_selector {
   height: 36px;
-  padding: 8px 12px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -11,4 +10,13 @@
 .tab_selector:hover {
   color: #050510;
   cursor: pointer;
+}
+.tab_selector p {
+  margin: 7px 12px;
+}
+.active_tab {
+  color: #050510;
+}
+.active_tab hr {
+  transform:scaleY(1);
 }

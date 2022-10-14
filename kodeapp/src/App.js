@@ -3,11 +3,21 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from './comps/Navbar';
 import AppRouter from './comps/UI/AppRouter';
 
+const deps = [
+  {dir: "all", name: "Все"},
+  {dir: "design", name: "Designers"},
+  {dir: "analytics", name: "Analysts"},
+  {dir: "management", name: "Managers"},
+  {dir: "ios", name: "iOS"},
+  {dir: "android", name: "Android"}
+];
+
 function App() {
+
   return (
     <BrowserRouter>
-      <Navbar/>
-      <AppRouter/>
+      <Navbar deps={deps}/>
+      <AppRouter deps={deps}/>
     </BrowserRouter>
   );
 }

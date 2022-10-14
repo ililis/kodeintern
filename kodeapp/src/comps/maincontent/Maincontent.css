@@ -3,12 +3,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px;
-    gap: 12px;
-
-    position: absolute;
-    height: 660px;
-    left: 0px;
-    right: 0px;
-    top: 168px;
+    padding: 16px;
 }

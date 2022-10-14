@@ -1,0 +1,9 @@
+.loading_profile_container {
+  display: flex;
+  height: 84px;
+  width: 343px;
+}
+.loading_info_container {
+  display: flex;
+  flex-direction: column;
+}
