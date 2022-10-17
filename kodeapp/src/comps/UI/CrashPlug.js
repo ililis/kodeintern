@@ -32,7 +32,7 @@ const CrashPlug = (props) => {
   
   return (
     <div className='crash_general_container'>
-      <img src='flying-saucer_1f6f8.svg' width='56px' height='56px'></img>
+      <img src="sourses/flying-saucer_1f6f8.svg" width='56px' height='56px'></img>
       <div className='crash_text_container'>
         <FirstChashText>Какой-то сверхразум все сломал</FirstChashText>
         <SecondChashText>Постараемся быстро починить</SecondChashText>

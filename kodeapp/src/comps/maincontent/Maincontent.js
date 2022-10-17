@@ -2,10 +2,10 @@ import './Maincontent.css';
 import React, {useState, useEffect} from 'react';
 import { useFetching } from '../../hooks/useFetching';
 import PostService from '../../API/PostService';
-import { UsersContext } from '../../context';
+// import { UsersContext } from '../../context';
 import Users from './Users';
 import LoadingUsers from './LoadingUsers';
-import CrashPlug from './CrashPlug';
+import CrashPlug from '../UI/CrashPlug';
 
 const Maincontent = (props) => {
   

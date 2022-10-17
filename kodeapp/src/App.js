@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter } from "react-router-dom";
-import Navbar from './comps/Navbar';
+import Navbar from './comps/Navbar/Navbar';
 import AppRouter from './comps/UI/AppRouter';
 
 const deps = [
