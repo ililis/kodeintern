@@ -5,9 +5,11 @@ import PostService from '../../API/PostService';
 import { UsersContext } from '../../context';
 import Users from './Users';
 import LoadingUsers from './LoadingUsers';
+import CrashPlug from './CrashPlug';
 
 const Maincontent = (props) => {
-
+  
+  const [needUpdate, setNeedUpdate] = useState(false);
   const [users, setUsers] = useState([{}]);
   const [fetchUsers, isLoading, error] = useFetching( async () => {
     const response = await PostService.getUsersByDepartment(props.dep)
@@ -17,8 +19,13 @@ const Maincontent = (props) => {
   // since React 18 useEffect always running twice :/
   useEffect ( () => {
     console.log("useEffect workin");
-    fetchUsers()
-  }, [props.dep])
+    fetchUsers();
+    setNeedUpdate(false);
+  }, [props.dep, needUpdate])
+
+  const forceUpdate = () => {
+    setNeedUpdate(true);
+  }
 
   return (
     // <UsersContext.Provider value={{
@@ -28,15 +35,13 @@ const Maincontent = (props) => {
     <div className="maincontent">
       {isLoading
         ? <LoadingUsers quantity={5}/>
-        : <div>
-            <Users users={users}/>
-            {/* <LoadingUsers quantity={5}/> */}
-          </div>
+        : <Users users={users}/>
       }
-      { error && <h3>Ошибка</h3> }
+      { error && <CrashPlug update={forceUpdate}/> }
     </div>
   // </UsersContext.Provider>
   );
 }
 
 export default Maincontent;
+

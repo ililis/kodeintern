@@ -1,11 +1,11 @@
 import './template.css';
 
 const template = (props) => {
-    return (
-      <div>
+  return (
+    <div>
 
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default template;

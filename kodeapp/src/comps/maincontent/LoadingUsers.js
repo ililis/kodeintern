@@ -2,21 +2,21 @@ import './LoadingUsers.css';
 import styled from "styled-components";
 
 const bgcolor = `background: linear-gradient(90deg, #F3F3F6 0%, #FAFAFA 100%);`
-const LoadingProfilePhoto = styled.p`
+const LoadingProfilePhoto = styled.div`
   ${bgcolor}
   width: ${(props) => (props.size)}px;
   height: ${(props) => (props.size)}px;
   border-radius: 50%;
   margin: 6px 0px;
 `;
-const LoadingFullNameP = styled.p`
+const LoadingFullNameP = styled.div`
   ${bgcolor}
   margin: 25px 0px 0px 16px;
   height: 16px;
   width: 144px;
   border-radius: 50px;
 `;
-const LoadingDep = styled.p`
+const LoadingDep = styled.div`
   ${bgcolor}
   height: 12px;
   width: 80px;
