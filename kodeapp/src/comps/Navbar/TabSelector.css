@@ -13,6 +13,7 @@
 }
 .tab_selector p {
   margin: 7px 12px;
+  white-space: nowrap;
 }
 .tab_selector hr {
   width: 100%;

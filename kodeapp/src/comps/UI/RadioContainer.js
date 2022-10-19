@@ -4,17 +4,11 @@ const RadioContainer = (props) => {
   
 
   return (
-    <div>
-      {/* {props.deps.map(dep => (
-        <InputItem key={props.region} name={dep.name} dir={dep.dir}/> 
-      ))}
-      <input type="radio" id="byabc"
-      name="sort" value="byabc"></input>
-      <label for="sortChoice1">По алфавиту</label>
-
-      <input type="radio" id="byborn"
-      name="sort" value="byborn"></input>
-      <label for="sortChoice2">По дате рождения</label> */}
+    <div className='sort_radio_item'>
+      <input type="radio" id={props.item.id} name={props.area} value={props.item.id}
+        onClick={props.changeSort} 
+        defaultChecked={props.checked}></input>
+      <label htmlFor={props.item.id}>{props.item.name}</label>
     </div>
   );
 }

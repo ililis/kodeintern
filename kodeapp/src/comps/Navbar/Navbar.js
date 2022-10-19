@@ -1,7 +1,7 @@
 import './Navbar.css';
 import styled from "styled-components"
 import TabSelector from './TabSelector';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SortPopUp from './SortPopUp';
 
 const TopDivider = styled.div`
@@ -9,13 +9,8 @@ const TopDivider = styled.div`
     width: 100%;
 `;
 
-const Image = styled.img`
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-`;
-
 const Navbar = (props) => {
+
   const [showSortPopup, setShowSortPopup] = useState(false);
 
   const sortClickHandler = () => {
@@ -26,10 +21,39 @@ const Navbar = (props) => {
     setShowSortPopup(false);
   }
   
+  // timeline - блок с горизонтальным скроллом
+  // timeline.onmousedown = () => {
+  //   let pageX = 0;
+
+  //   document.onmousemove = e => {
+  //     if (pageX !== 0) {
+  //       timeline.scrollLeft = timeline.scrollLeft + (pageX - e.pageX);
+  //     }
+  //     pageX = e.pageX;
+  //   };
+
+  //   // заканчиваем выполнение событий
+  //   timeline.onmouseup = () => {
+  //     document.onmousemove = null;
+  //     timeline.onmouseup = null;
+  //   };
+
+  //   // отменяем браузерный drag
+  //   timeline.ondragstart = () => {
+  //     return false;
+  //   };
+  // };
+
+  // useEffect ( () => {
+  //   window.addEventListener('keydown', (event) => {
+  //     // ...
+  //   });
+  // }, [])
+
   return (
     <div>
       <div className="navbar">
-      <TopDivider/>
+        <TopDivider/>
           <div className="header_container">
             <h1>Поиск</h1>
           </div>
@@ -50,11 +74,11 @@ const Navbar = (props) => {
             </div>
           </div>
         </div>
-        <div className='scrollbar_container'>
+        <section className='scrollbar_container'>
           {props.deps.map(dep => (
-              <TabSelector key={dep.dir} name={dep.name} dir={dep.dir}/>   
+            <TabSelector key={dep.dir} name={dep.name} dir={dep.dir}/>   
           ))}
-        </div>
+        </section>
       </div>
       <hr className='navbar_divider'/>
       { showSortPopup && <SortPopUp closePopUp={closePopUpHandler}/> }

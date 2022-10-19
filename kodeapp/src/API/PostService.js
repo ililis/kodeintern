@@ -1,9 +1,11 @@
 import axios from "axios";
+import KodeLibrary from "../functions/KodeLibrary";
 
 export default class PostService {
-  static async getUsersByDepartment (dep) {
+  static async getUsersByDepartment (dep, sortType) {
     const response = await axios.get('https://stoplight.io/mocks/kode-frontend-team/koder-stoplight/86566464/users?__example=' + dep.toString());
-    return response.data;
+    const dataResponse = response.data.items;
+    return KodeLibrary.sortUsers(dataResponse, sortType)
   }
 
   // static async getUserTracks (id) {

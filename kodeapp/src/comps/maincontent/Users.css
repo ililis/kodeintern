@@ -2,5 +2,35 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: auto;
+  width: 100%;
+  /* margin-right: auto; */
+  font-family: 'Inter';
+  font-style: normal;
+}
+.year_divider {
+  display: flex;
+  width: 100%;
+  height: 68px;
+  padding: 24px;
+  
+}
+.year_divider p {
+  margin: 0;
+  width: 160px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #C3C3C6;
+}
+.year_divider_line {
+  height: 0px;
+  width: 100%;
+}
+.year_divider_line hr {
+  width: 100%;
+  margin: 10px;
+  height: 1px;
+  border: none;
+  background: #C3C3C6;
 }

@@ -1,10 +1,17 @@
 import RadioContainer from '../UI/RadioContainer';
 import './SortPopUp.css';
+import { useContext } from 'react';
+import { SortUsersContext } from '../../context';
 
 const SortPopUp = (props) => {
+  let sortItems = [
+    {id: "byname", name: "По алфавиту"},
+    {id: "byborn", name: "По дню рождения"}
+  ];
 
-  // let sortItems = ["По алфавиту", "По дню рождения"];
-  
+  let sortContext = useContext(SortUsersContext);
+  const changeSortHandler = (event) => sortContext.setSortType(event.target.value);
+
   return (
     <div>
       <div className='sort_popup_gray_bg' onClick={props.closePopUp}></div>
@@ -17,17 +24,15 @@ const SortPopUp = (props) => {
           </svg>
         </div>
         <div className='sort_radio_container'>
-          {/* <RadioContainer items={sortItems} region={"sort"}/> */}
-          <div className='sort_radio_item'>
-            <input type="radio" id="byabc"
-            name="sort" value="byabc"></input>
-            <label for="byabc">По алфавиту</label>
-          </div>
-          <div className='sort_radio_item'>
-            <input type="radio" id="byborn"
-            name="sort" value="byborn"></input>
-            <label for="byborn">По дню рождения</label>
-          </div>
+          { sortItems.map(item => (
+            <RadioContainer 
+              key={item.id} 
+              area={"sort"}
+              item={item} 
+              checked={sortContext.sortType === item.id}
+              changeSort={changeSortHandler}
+            />
+          ))}
         </div>
       </div>
     </div>

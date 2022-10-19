@@ -6,9 +6,8 @@ const TabSelector = (props) => {
     <NavLink to={"/"+props.dir} 
       className={({isActive}) => 
       isActive ? 'tab_selector active_tab': 'tab_selector'}>
-        <p>{props.name}</p>
-        <hr/>
-
+      <p>{props.name}</p>
+      <hr/>
     </NavLink>
   );
 }

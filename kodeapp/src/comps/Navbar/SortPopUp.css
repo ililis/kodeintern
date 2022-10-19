@@ -32,11 +32,12 @@
   fill: #C3C3C6;
 }
 .sort_popup svg:hover{
+  fill: #050510;
   cursor: pointer;
 }
 .sort_popup_header {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: 327px;
   height: 24px;
   margin: 24px 7px 0;
@@ -46,13 +47,10 @@
   margin: 0;
   font-weight: 600;
   font-size: 20px;
-  line-height: 24px;
-
-  /* text-align: center; */
-
-  
+  line-height: 24px;  
 }
 
+/* /////////////////////////////// */
 .sort_radio_container {
   display: flex;
   flex-direction: column;
@@ -60,31 +58,4 @@
   width: 100%;
   height: 120px;
   margin: 16px 0 0;
-}
-.sort_radio_item {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 60px;
-  
-}
-.sort_radio_item label {
-  /* display: flex; */
-  margin: 0 0 0 12px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  height: 16px; /* //?????????????? */
-}
-.sort_radio_item label:hover {
-  cursor: pointer;
-}
-.sort_radio_item input {
-  width: 24px;
-  height: 24px;
-  /* border: 6px solid #6534FF; */
-}
-.sort_radio_item input:hover {
-  cursor: pointer;
 }

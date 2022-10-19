@@ -1,6 +1,5 @@
 .maincontent {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     padding: 16px;
     width: 100%;
 }

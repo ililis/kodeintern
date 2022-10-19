@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const UsersContext = createContext(null);
+export const SortUsersContext = createContext(null);

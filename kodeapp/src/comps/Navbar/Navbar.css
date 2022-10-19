@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
     width: 100%;
     background: #FFFFFF;
 }
@@ -55,7 +55,7 @@
 }
 
 .inside_input svg:hover {
-    fill: #050510;
+    fill: #6534FF;
     cursor: pointer;
 }
 .inside_input input {
@@ -89,15 +89,20 @@
 
 .scrollbar_container {
     display: flex;
-    margin: 8px 0px 0px 16px;
+    width: 100%;
+    padding: 8px 16px 0px 16px;
     height: Hug(36px);
+    overflow-x: auto;
+    overflow-y: auto;
 }
+.scrollbar_container::-webkit-scrollbar {
+    display: none;
+  }
 .navbar_divider {
     margin: 0;
     padding: 0;
     border: none;
     height: 0.03em;
     background: #C3C3C6;
-    /* overflow: visible; */
 }
 

@@ -1,12 +1,11 @@
 .crash_general_container {
-  grid-column-start: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 343px;
+  /* width: 343px; */
   height: 150px;
   margin-top: 133px;
-  min-width: 100%;
+  width: 100%;
 }
 .crash_text_container{
   display: flex;

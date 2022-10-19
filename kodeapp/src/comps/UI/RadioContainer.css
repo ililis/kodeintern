@@ -1,0 +1,35 @@
+.sort_radio_item {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  
+}
+.sort_radio_item label {
+  margin: 20px 0 20px 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.sort_radio_item label:hover {
+  cursor: pointer;
+}
+.sort_radio_item input {
+  width: 20px;
+  height: 20px;
+  margin: 20px 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+
+  border: 2px solid #6534FF;
+  transition: 0.1s all linear;
+}
+.sort_radio_item input:checked {
+  border: 6px solid #6534FF;
+}
+.sort_radio_item input:hover {
+  cursor: pointer;
+}
